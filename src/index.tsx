@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const app = (
   <React.StrictMode>
-    <App/>
+    <ChakraProvider>
+      <App/>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
