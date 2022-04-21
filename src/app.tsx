@@ -1,12 +1,12 @@
 import React from 'react';
 import Main from './pages/main';
-import ColorModeSwitcher from './components/color-mode-switcher';
+import NavBar from './components/navbar';
 
 const App = () => {
 
   return (
     <>
-      <ColorModeSwitcher />
+      <NavBar />
       <Main />
     </>
   );
