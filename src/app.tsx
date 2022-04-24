@@ -1,10 +1,15 @@
 import React from 'react';
 
+import NavBar from './components/navbar';
+import Main from './pages/main';
+
 const App = () => {
+
   return (
-    <h1>
-      First page
-    </h1>
+    <>
+      <NavBar />
+      <Main />
+    </>
   );
 };
 

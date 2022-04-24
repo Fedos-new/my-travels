@@ -5,23 +5,46 @@
   },
   "extends": [
     "airbnb-typescript/base",
+    "plugin:react-hooks/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "sourceType": "module"
   },
   "plugins": [
     "@typescript-eslint",
     "simple-import-sort"
   ],
   "rules": {
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react", "^"],
+          ["^react-icons(/.*|$)", "^@chakra-ui/react"],
+          ["^(components|containers)(/.*|$)"],
+          ["^(pages)(/.*|$)"],
+          ["^(utils|helpers|forms|enhancers|app|modals)(/.*|$)"],
+          ["^(constants)(/.*|$)"],
+          ["^(actions|redux-store|store)(/.*|$)"],
+          ["types"],
+          ["^\\.","^\\.."],
+          ["^.+\\.less$", "^.+\\.css$"]
+        ]
+      }
+    ],
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "prefer-const": "error",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "no-plusplus": "off",
     "no-console": "warn",
-    "max-len": ["warn", { "code": 120 }],
+    "max-len": ["error", { "code": 140, "tabWidth": 4, "ignoreComments": true }],
     "indent": ["warn", 2, {
       "SwitchCase": 1
     }],

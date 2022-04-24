@@ -32,8 +32,12 @@ module.exports = ({development}) => ({
                 test: /\.(ts|js)x?$/,
                 exclude: /node_modules/,
                 use: [
-                    'ts-loader',
-                    'babel-loader'
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true
+                        }
+                    }
                 ],
 
             },
