@@ -1,6 +1,7 @@
-import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
+
 import { FaMoon, FaSun } from 'react-icons/fa';
+import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react';
 
 const ColorModeSwitcher = () => {
   const { toggleColorMode } = useColorMode();
@@ -9,9 +10,9 @@ const ColorModeSwitcher = () => {
 
   return (
     <IconButton
-      size='md'
+      size="md"
       variant="ghost"
-      color='current'
+      color="current"
       aria-label={`Переключить на ${text} режим`}
       fontSize="lg"
       margin="2"

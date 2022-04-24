@@ -1,6 +1,7 @@
 import React from 'react';
-import Main from './pages/main';
+
 import NavBar from './components/navbar';
+import Main from './pages/main';
 
 const App = () => {
 

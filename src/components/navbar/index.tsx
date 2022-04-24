@@ -1,4 +1,7 @@
 import React, { ReactNode } from 'react';
+
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { GiCampfire, GiSchoolBag } from 'react-icons/gi';
 import {
   Box,
   Button, Container,
@@ -15,8 +18,7 @@ import {
   useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { GiSchoolBag, GiCampfire } from 'react-icons/gi';
+
 import ColorModeSwitcher from '../color-mode-switcher';
 
 const Links = ['Мои путешествия', 'Будущие путешествия', 'Карта'];
